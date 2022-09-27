@@ -1,1 +1,11 @@
-<p>layout works!</p>
+<mat-sidenav-container class="sidenavContainer" hasBackdrop="false">
+    <mat-sidenav #sidenav class="sidenav" fixedInViewport [opened]="true" [mode]="'side'">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header class="header"></app-header>
+        <div class="router">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

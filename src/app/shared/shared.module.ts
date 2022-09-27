@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './search/search.component';
+import { SharedComponentsModule } from './components/shared-components.module';
 
 
 
@@ -9,7 +10,8 @@ import { SearchComponent } from './search/search.component';
     SearchComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedComponentsModule
   ]
 })
 export class SharedModule { }
