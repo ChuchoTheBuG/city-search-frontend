@@ -1,0 +1,92 @@
+<label matDialogTitle class="folio">{{data.name}}</label>
+<mat-divider></mat-divider>
+<mat-dialog-content>
+    <div class="time">
+        <table>
+            <tr>
+                <th>Zona horaria</th>
+            </tr>
+            <tr>
+                <td>Fecha</td>
+                <td>{{convertToDate(data.dt)}}</td>
+            </tr>
+            <tr>
+                <td>Zona Horaria </td>
+                <td>{{convertToTimeZone(data.timezone)}}</td>
+            </tr>
+            <tr>
+                <td>Pais</td>
+                <td>{{data.sys.country}}</td>
+            </tr>
+            <tr>
+                <td>Salida del sol :</td>
+                <td>{{convertToHours(data.sys.sunrise)}}</td>
+            </tr>
+            <tr>
+                <td>Puesta del sol</td>
+                <td>{{convertToHours(data.sys.sunset)}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="localitation">
+        <table>
+            <tr>
+                <th>Localización</th>
+            </tr>
+            <tr>
+                <td>Latitud</td>
+                <td>{{data.coord.lat}}</td>
+            </tr>
+            <tr>
+                <td>Longuitud</td>
+                <td>{{data.coord.lon}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="weather">
+        <table>
+            <tr>
+                <th>Clima</th>
+            </tr>
+            <tr>
+                <td>Temperatura</td>
+                <td>{{convertToCentigrade(data.main.temp)}} °C</td>
+            </tr>
+            <tr>
+                <td>Sensación termica</td>
+                <td>{{convertToCentigrade(data.main.feels_like)}} °C</td>
+            </tr>
+            <tr>
+                <td>Temperatura Max</td>
+                <td>{{convertToCentigrade(data.main.temp_max)}} °C</td>
+            </tr>
+            <tr>
+                <td>Temperatura Min</td>
+                <td>{{convertToCentigrade(data.main.temp_min)}} °C</td>
+            </tr>
+            <tr>
+                <td>Presión atmosférica</td>
+                <td>{{data.main.sea_level}} hPa</td>
+            </tr>
+            <tr>
+                <td>Humedad</td>
+                <td>{{data.main.humidity}}%</td>
+            </tr>
+            <tr>
+                <td>Velocidad del viento</td>
+                <td>{{convertToKH(data.wind.speed)}} Km/h.</td>
+            </tr>
+            <tr>
+                <td>Dirección del viento</td>
+                <td>{{convertToDirection(data.wind.deg)}}</td>
+            </tr>
+            <tr>
+                <td>Cielo nublado</td>
+                <td>{{data.clouds.all}}%</td>
+            </tr>
+        </table>
+    </div>
+</mat-dialog-content>
+<div>
+    <button mat-raised-button color="warn" (click)="close()">Cerrar</button>
+</div>

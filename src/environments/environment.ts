@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiApp : "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather",
+  apiToken : "865741303d542bd33b7cdafea0fb8ae9"
 };
 
 /*

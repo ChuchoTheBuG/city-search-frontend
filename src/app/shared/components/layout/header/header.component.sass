@@ -1,0 +1,85 @@
+//*****HEADER*******//
+$breakpoint_PC: 1260px
+$breakpoint_tablet: 960px
+$breakpoint_cel: 480px
+
+
+.toolbar
+  display: grid
+  grid-template-columns: 50px 150px 5fr 1fr
+  grid-column-gap: 10px
+  height: 80px
+
+//* btn-sider
+.btn-sinebar
+  justify-self: center
+
+mat-icon 
+  font-size: 25px !important
+
+
+//*Nombre Aplicacion 
+.name-aplic
+  font-size: 20px!important
+
+//* Imagen Logo
+.cabecera_logo
+  text-align: center
+
+img
+  width: 90%
+  max-width: 500px
+
+//*Datos del usuario
+.dataUser
+  display: flex
+  flex-direction: column
+  text-align: end
+
+.userName
+  font-size: 15px
+
+.juris
+  font-size: 13px
+  color: #646161
+
+@media (max-width: $breakpoint_PC )
+
+
+@media (max-width: $breakpoint_tablet )
+
+
+@media (max-width: $breakpoint_cel )
+  .toolbar
+    width: 100%
+    height: 100px
+    grid-column-gap: 0
+    grid-template-areas: "logo logo logo " "btn Nombre Salir "
+    grid-template-columns: 50px 2fr 60px
+    
+
+
+  .cabecera_logo
+     grid-area: logo
+     width: 99%
+  
+  .btn-sinebar
+     grid-area: btn
+  
+  .name-aplic
+    grid-area: Nombre
+    text-align: center
+  
+  .userName
+    display: none
+  
+  .menu-button span
+    display: none
+
+  .dataUser 
+    display: block
+    grid-area: Salir  
+    margin-bottom: 10px
+
+  mat-icon
+    font-size: 33px !important

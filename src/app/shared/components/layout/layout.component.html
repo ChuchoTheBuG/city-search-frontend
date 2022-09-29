@@ -1,0 +1,20 @@
+<mat-sidenav-container class="sidenavContainer" hasBackdrop="false">
+    <mat-sidenav #sidenav class="sidenav" fixedInViewport [opened]="true" [mode]="'side'">
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-header class="header"></app-header>
+        <div class="breadcrumbs">
+            <xng-breadcrumb class="xroot xseparator">
+                <ng-container *xngBreadcrumbItem="let breadcrumb; let info = info; let first = first">
+                    <mat-icon *ngIf="info">{{ info }}</mat-icon>
+                    <ng-container *ngIf="!first">{{ breadcrumb }}</ng-container>
+                </ng-container>
+            </xng-breadcrumb>
+        </div>
+        <div class="router">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "square-jelly-box" [fullScreen] = "true"><p style="color: white" > Loading... </p></ngx-spinner>
