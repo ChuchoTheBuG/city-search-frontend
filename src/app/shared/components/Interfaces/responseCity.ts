@@ -35,9 +35,11 @@ export interface City {
    }
    
    export interface Sys {
+    id:      number;
     country: string;
     sunrise: number;
     sunset:  number;
+    type:    number;
    }
    
    export interface Weather {

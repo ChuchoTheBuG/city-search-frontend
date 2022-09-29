@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { SearchComponent } from 'src/app/shared/search/search.component';
+import { SearchComponent } from 'src/app/shared/components/search/search.component';
 import { HomeComponent } from './home.component';
 
 
@@ -15,7 +15,7 @@ export const HomeRoutes: Routes = [
             {
                 path: 'search',
                 component: SearchComponent,
-                data: { breadcrumb: 'Search'},
+                data: { breadcrumb: 'Busqueda'},
             }
         ] 
     },

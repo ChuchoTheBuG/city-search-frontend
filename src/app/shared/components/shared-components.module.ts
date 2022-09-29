@@ -10,12 +10,26 @@ import { RouterModule } from '@angular/router';
 import { SidenavComponent } from './layout/sidenav/sidenav.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { SearchComponent } from './search/search.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { AppPopupComponent } from './app-popup/app-popup.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BreadcrumbModule } from 'xng-breadcrumb';
+import { NgxSpinnerModule } from "ngx-spinner";
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 const components = [
   LayoutComponent,
   HeaderComponent,
-  SidenavComponent
+  SidenavComponent,
+  SearchComponent,
+  AppPopupComponent
 ]
 
 @NgModule({
@@ -28,7 +42,17 @@ const components = [
     MatIconModule,
     RouterModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    BreadcrumbModule,
+    NgxSpinnerModule,
+    MatSnackBarModule
   ]
 })
 export class SharedComponentsModule { }
